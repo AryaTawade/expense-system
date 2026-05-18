@@ -4,6 +4,8 @@ from sqlalchemy.orm import Session
 from app.database import engine, get_db
 from models import expense as expense_models
 from app import schemas, crud
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 
 expense_models.Base.metadata.create_all(bind=engine)
 
@@ -51,3 +53,7 @@ from ml.predictor import predict_category
 @app.post("/predict")
 def predict(description: str, amount: float):
     return predict_category(description, amount)
+
+@app.get("/app")
+def serve_ui():
+    return FileResponse("index.html")
