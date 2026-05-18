@@ -6,7 +6,6 @@ A finance platform that stores expenses, analyzes spending patterns, and predict
 
 - UI → https://expense-system-4q3u.onrender.com/app
 - API → https://expense-system-4q3u.onrender.com/docs
-- GitHub → https://github.com/AryaTawade/expense-system
 
 ## Tech Stack
 
